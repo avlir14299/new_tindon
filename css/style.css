@@ -203,6 +203,9 @@ body {
           animation: circleOverR 0.5s cubic-bezier(0.93, 0.13, 0.45, 0.54) forwards;
 }
 
+.header {
+  position: fixed;
+}
 .header__inner {
   width: 87.7%;
   margin-left: auto;
@@ -309,6 +312,7 @@ body {
 }
 
 .firstview {
+  position: relative;
   height: 100vh;
 }
 .firstview__image {
@@ -316,8 +320,25 @@ body {
   align-items: center;
   justify-content: center;
 }
+.firstview__stall {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
 
 .history {
+  margin: 100px 0;
+  background: url(../images/street.png) repeat-x bottom right;
+  width: 100%;
+}
+.history__inner {
+  width: 87.7%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.history__mode {
+  width: 100%;
   writing-mode: vertical-rl;
 }
 .history__title {
@@ -329,6 +350,26 @@ body {
 }
 .history__text {
   height: 18em;
+}
+.history__btn {
+  text-align: right;
+}
+.history__btn__design {
+  display: inline-block;
+  background-color: #D93245;
+  width: 7rem;
+  height: 2rem;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 2rem;
+  border: 1px #fff solid;
+  border-radius: 3px;
+  outline: #D93245 4px solid;
+  position: relative;
+  z-index: 99;
 }
 
 .summary__inner {
