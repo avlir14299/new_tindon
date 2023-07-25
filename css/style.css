@@ -339,26 +339,32 @@ body {
 }
 .history__mode {
   width: 100%;
-  writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
-.history__title {
+.history__mode__title {
   font-family: RocknRollOne;
   font-size: 40px;
   color: #592A0C;
   text-align: center;
   margin: 0;
+  writing-mode: vertical-rl;
 }
-.history__text {
+.history__mode__text {
   height: 18em;
+  writing-mode: vertical-rl;
 }
 .history__btn {
+  writing-mode: vertical-rl;
   text-align: right;
 }
 .history__btn__design {
   display: inline-block;
   background-color: #D93245;
-  width: 7rem;
-  height: 2rem;
+  width: 2rem;
+  height: 7rem;
   color: #fff;
   text-align: center;
   text-decoration: none;

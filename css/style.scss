@@ -338,30 +338,39 @@ body {
 
     &__inner {
         @include inner();
+
     }
 
     &__mode {
         width: 100%;
         -ms-writing-mode: tb-rl;
-        writing-mode: vertical-rl;
-    }
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
 
-    &__title {
-        @include title();
-    }
 
-    &__text {
-        height: 18em;
+        &__title {
+            @include title();
+            writing-mode: vertical-rl;
+        }
+
+        &__text {
+            height: 18em;
+            writing-mode: vertical-rl;
+        }
+
+
     }
 
     &__btn {
+        writing-mode: vertical-rl;
         text-align: right;
 
         &__design {
             display: inline-block;
             background-color: #D93245;
-            width: 7rem;
-            height: 2rem;
+            width: 2rem;
+            height: 7rem;
             color: #fff;
             text-align: center;
             text-decoration: none;
