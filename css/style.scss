@@ -81,6 +81,55 @@ $circleCubic: cubic-bezier(.93, .13, .45, .54);
     }
 }
 
+
+
+@mixin inner($a: 87.7%) {
+    width: $a;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@font-face {
+
+    font-family: RocknRollOne;
+    src:
+        url(../font/RocknRoll_One/RocknRollOne-Regular.ttf);
+}
+
+@mixin title($size: 40px, $align: center) {
+    font-family: RocknRollOne;
+    font-size: $size;
+    color: #592A0C;
+    text-align: $align;
+    margin: 0;
+}
+
+//BASE-------------------------------------------------------------------------------------
+body {
+    background-color: #FFF7F0;
+    color: #222;
+    margin: 0;
+}
+
+.tindonman {
+    position: fixed;
+    z-index: 999;
+
+    width: 100%;
+    bottom: 0;
+
+    &__img {
+        height: 110px;
+
+        background-image: url(../images/tindonman.png);
+        background-repeat: repeat-x;
+    }
+}
+
+.on {
+    display: block
+}
+
 .btn {
     width: fit-content;
     position: relative;
@@ -127,7 +176,9 @@ $circleCubic: cubic-bezier(.93, .13, .45, .54);
     }
 
     &.on {
+
         .btn__design {
+            outline: #D93245 4px solid;
             animation: btnOver .5s $btnCubic forwards;
         }
 
@@ -144,84 +195,7 @@ $circleCubic: cubic-bezier(.93, .13, .45, .54);
     }
 }
 
-@mixin inner($a: 87.7%) {
-    width: $a;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@font-face {
-
-    font-family: RocknRollOne;
-    src:
-        url(../font/RocknRoll_One/RocknRollOne-Regular.ttf);
-}
-
-@mixin title($size: 40px, $align: center) {
-    font-family: RocknRollOne;
-    font-size: $size;
-    color: #592A0C;
-    text-align: $align;
-    margin: 0;
-}
-
-//BASE----
-body {
-    background-color: #FFF7F0;
-    color: #222;
-    margin: 0;
-}
-
-.tindonman {
-    position: fixed;
-    z-index: 999;
-
-    width: 100%;
-    bottom: 0;
-
-    &__img {
-        height: 110px;
-
-        background-image: url(../images/tindonman.png);
-        background-repeat: repeat-x;
-    }
-}
-
-.on {
-    display: block
-}
-
-//INDEX-------
-.header {
-    &__inner {
-        @include inner();
-    }
-
-    &__img {
-        width: 114px;
-        height: auto;
-    }
-
-    &__contents {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__nav {
-        display: none;
-    }
-
-    &__hamburger {
-        background-color: #ED7222;
-        padding: 2px;
-        width: 30px;
-        border-radius: 10px;
-    }
-}
-
-
-
+//INDEX---------------------------------------------------------------------------------------
 .history {
     writing-mode: vertical-rl;
 
@@ -479,33 +453,15 @@ body {
 
 
 
-@media (min-width:1200px) {
-    .footer {
-        &__wrapper {
-            display: flex;
-            justify-content: space-between;
-        }
+@media (min-width:980px) {
 
-        &__index {
-            background-color: #fff;
-            color: #222;
-
-            &-title {
-                @include title(32, center);
-            }
-
-            &-contents {
-                display: block;
-            }
-        }
-
-        .social {
-            &__contents {
-                flex-wrap: nowrap;
-            }
+    .social {
+        &__contents {
+            flex-wrap: nowrap;
         }
     }
 }
+
 
 
 
