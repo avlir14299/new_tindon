@@ -202,6 +202,30 @@ body {
   display: block;
 }
 
+.header__inner {
+  width: 87.7%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__img {
+  width: 114px;
+  height: auto;
+}
+.header__contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav {
+  display: none;
+}
+.header__hamburger {
+  background-color: #ED7222;
+  padding: 2px;
+  width: 30px;
+  border-radius: 10px;
+}
+
 .history {
   writing-mode: vertical-rl;
 }
@@ -441,8 +465,26 @@ body {
   margin-bottom: 24px;
 }
 
-@media (min-width: 980px) {
-  .social__contents {
+@media (min-width: 1200px) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__index {
+    background-color: #fff;
+    color: #222;
+  }
+  .footer__index-title {
+    font-family: RocknRollOne;
+    font-size: 32;
+    color: #592A0C;
+    text-align: center;
+    margin: 0;
+  }
+  .footer__index-contents {
+    display: block;
+  }
+  .footer .social__contents {
     flex-wrap: nowrap;
   }
 }
