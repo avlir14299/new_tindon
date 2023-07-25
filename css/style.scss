@@ -215,24 +215,34 @@ body {
 
     &__title {
         @include title();
-
-        &--sub {
-            @include title();
-            writing-mode: vertical-lr;
-        }
     }
 
     &__event {
         display: flex;
         justify-content: space-between;
+
+        &--title {
+            @include title();
+            writing-mode: vertical-lr;
+        }
     }
 
     &__content {
         width: 300px;
+
+        &__title {
+            @include title(24px, left);
+        }
     }
 
     &__btn {
         text-align: center;
+        font-size: 24px;
+        font-family: RocknRollOne;
+
+        &__design {
+            text-decoration: none;
+        }
     }
 }
 

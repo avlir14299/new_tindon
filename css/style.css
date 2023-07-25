@@ -229,7 +229,11 @@ body {
   text-align: center;
   margin: 0;
 }
-.summary__title--sub {
+.summary__event {
+  display: flex;
+  justify-content: space-between;
+}
+.summary__event--title {
   font-family: RocknRollOne;
   font-size: 40px;
   color: #592A0C;
@@ -237,15 +241,23 @@ body {
   margin: 0;
   writing-mode: vertical-lr;
 }
-.summary__event {
-  display: flex;
-  justify-content: space-between;
-}
 .summary__content {
   width: 300px;
 }
+.summary__content__title {
+  font-family: RocknRollOne;
+  font-size: 24px;
+  color: #592A0C;
+  text-align: left;
+  margin: 0;
+}
 .summary__btn {
   text-align: center;
+  font-size: 24px;
+  font-family: RocknRollOne;
+}
+.summary__btn__design {
+  text-decoration: none;
 }
 
 .footer {
