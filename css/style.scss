@@ -309,6 +309,15 @@ body {
 
 
 
+.firstview {
+    height: 100vh;
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
 
 .history {
     writing-mode: vertical-rl;

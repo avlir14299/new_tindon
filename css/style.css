@@ -308,6 +308,15 @@ body {
   margin-bottom: 8px;
 }
 
+.firstview {
+  height: 100vh;
+}
+.firstview__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .history {
   writing-mode: vertical-rl;
 }
