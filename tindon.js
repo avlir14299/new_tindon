@@ -1,27 +1,27 @@
 var isScrolling = 0;
 var timeoutId;
 
-const tindon = document.querySelector('#tindon');
-window.addEventListener("scroll", function () {
-    tindon.style.display = "block";
+// const tindon = document.querySelector('#tindon');
+// window.addEventListener("scroll", function () {
+//     tindon.style.display = "block";
 
-    clearTimeout(timeoutId);
+//     clearTimeout(timeoutId);
 
-    timeoutId = setTimeout(function () {
-        tindon.style.display = "none";
-    }, 500);
-});
+//     timeoutId = setTimeout(function () {
+//         tindon.style.display = "none";
+//     }, 500);
+// });
 
-const btn = document.querySelectorAll('#btn');
+// const btn = document.querySelectorAll('#btn');
 
-btn.forEach(ele => {
-    ele.addEventListener('mouseover', () => {
-        ele.classList.add('on');
-    })
-    ele.addEventListener('mouseout', () => {
-        ele.classList.remove('on');
-    })
-});
+// btn.forEach(ele => {
+//     ele.addEventListener('mouseover', () => {
+//         ele.classList.add('on');
+//     })
+//     ele.addEventListener('mouseout', () => {
+//         ele.classList.remove('on');
+//     })
+// });
 
 
 
