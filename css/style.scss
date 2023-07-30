@@ -2,6 +2,8 @@
 
 $btnCubic: cubic-bezier(.8, .07, .94, .42);
 $circleCubic: cubic-bezier(.93, .13, .45, .54);
+$text-color: #222;
+
 
 @keyframes btnOver {
     0% {
@@ -87,6 +89,12 @@ $circleCubic: cubic-bezier(.93, .13, .45, .54);
     margin-right: auto;
 }
 
+@mixin flex($a: center, $j: space-between) {
+    display: flex;
+    align-items: $a;
+    justify-content: $j;
+}
+
 @font-face {
     font-family: RocknRollOne;
     src: url(../font/RocknRoll_One/RocknRollOne-Regular.ttf);
@@ -101,6 +109,10 @@ $circleCubic: cubic-bezier(.93, .13, .45, .54);
 }
 
 //BASE-------------------------------------------------------------------------------------
+html {
+    font-size: clamp(12px, 2.5vw, 16px);
+}
+
 body {
     background-color: #FFF7F0;
     color: #222;
@@ -678,9 +690,15 @@ body {
 }
 
 
-.question {
-    &__inner {
-        @include inner();
+.questions {
+    margin-bottom: 48px;
+
+    &__titleerea {
+        padding: 32px;
+        padding-left: 6.15vw;
+        border-radius: 0 10px 10px 0;
+        background-color: #fff;
+        box-shadow: 1px 3px 5px #666;
     }
 
     &__title {
@@ -688,101 +706,162 @@ body {
         color: #592A0C;
         font-style: 32px;
         writing-mode: vertical-rl;
-        padding: 32px;
-        border-radius: 0 10px 10px 0;
-        background-color: #fff;
-        box-shadow: 1px 3px 5px #666;
+    }
+
+    &__inner {
+        @include inner();
     }
 
     &__text {
+        display: inline-block;
+        width: fit-content;
+        padding-right: 6.15vw;
         line-height: 2.5;
+        margin: 0;
     }
 
-    &__content {
+    &__flex {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 50px 0;
-
     }
 
-    &__index {}
+    &__item {
+        display: flex;
+        flex-direction: column;
 
-    &__aiueo {
-        margin: 100px 0;
-    }
+        &.off {
 
-    &__box {
+            .question {
+                &__plus__line {
+                    &:last-child {
+                        transform: rotate(90deg) translateX(-2px);
+                        transition: .5s;
+                    }
+                }
+            }
 
-        &-q {
-            padding: 24px;
-            background-color: #fff;
-            margin-bottom: 40px;
-        }
+            .answer {
+                display: none;
 
-        &-a {
-            padding: 24px;
-            background-color: #fff;
-            margin-bottom: 40px;
-        }
-
-        &-textq {
-            @include inner();
-            max-width: 366px
-        }
-
-        &-texta {
-            @include inner();
-        }
-
-
-
-        &-textq::before {
-            content: "Q";
-            font-size: 32px;
-            font-weight: bold;
-            position: absolute;
-            top: -30px;
-            color: #FFAB5E;
-        }
-
-        &-textq::after {
-            content: "+";
-            font-size: 32px;
-            color: #222;
-            position: absolute;
-            right: 24px;
-            top: 12px;
-        }
-
-
-        &-texta::before {
-            content: "A";
-            font-size: 32px;
-            font-weight: bold;
-            position: absolute;
-            top: -30px;
-            color: #00f;
+            }
         }
     }
 
+    &__items {
 
-    &__inquiry {
+        font-size: 1.125rem;
 
-        &-title {
-            width: 200px;
-            font-size: 24px;
-            padding: 8px 24px;
-            font-weight: bold;
-            border-radius: 20px;
-            text-align: center;
+        .question {
+            display: inline-block;
+            padding: 1.5rem 25px 1.5rem 6.15vw;
             background-color: #fff;
-            margin: 0 auto;
-            margin-bottom: 24px;
-            box-shadow: 1px 3px 5px #666;
+            border-radius: 0 40px 40px 0;
+            position: relative;
+            max-width: 809px;
+            margin-bottom: 48px;
+            margin-right: 6.15vw;
+            @include flex();
+
+            &__plus {
+
+                &__line {
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                    border-radius: 1px;
+                    background-color: $text-color;
+
+                    &:last-child {
+
+                        transform: rotate(0) translateY(-2px);
+                        transition: .5s;
+
+                    }
+                }
+            }
+
+            p {
+                @include inner();
+                display: block;
+                margin: 0;
+            }
+
+
+            &::before {
+                content: "Q";
+                font-size: 32px;
+                font-weight: bold;
+                position: absolute;
+                top: -30px;
+                color: #FFAB5E;
+            }
         }
 
 
+
+        .answer {
+
+            position: relative;
+            display: inline-block;
+            padding: 1.5rem 6.15vw 1.5rem 40px;
+            background-color: #fff;
+            border-radius: 40px 0 0 40px;
+            margin-bottom: 48px;
+            margin-left: auto;
+            max-width: 809px;
+
+            &::before {
+                content: "A";
+                font-size: 32px;
+                font-weight: bold;
+                position: absolute;
+                top: -30px;
+                color: #00f;
+            }
+
+        }
+
+        //         ::before {
+        //     content: "Q";
+        //     font-size: 32px;
+        //     font-weight: bold;
+        //     position: absolute;
+        //     top: -30px;
+        //     color: #FFAB5E;
+        // }
+
+
+        // ::before {
+        //     content: "A";
+        //     font-size: 32px;
+        //     font-weight: bold;
+        //     position: absolute;
+        //     top: -30px;
+        //     color: #00f;
+        // }
+
+    }
+}
+
+.contact {
+    @include inner();
+    margin-left: auto;
+    margin-bottom: auto;
+    width: clamp(342px, 2vw, 608px);
+
+    &__title {
+        width: 200px;
+        font-size: 24px;
+        padding: 8px 24px;
+        font-weight: bold;
+        border-radius: (68/2)+px;
+        text-align: center;
+        background-color: #fff;
+        margin: 0 auto;
+        margin-bottom: 24px;
+        box-shadow: 1px 3px 5px #666;
     }
 
     &__form {
@@ -794,8 +873,13 @@ body {
     }
 
     &__btn {
-        text-align: center;
+        .btn__design {
+            width: 14.5rem;
+            text-align: center;
+        }
     }
+
+
 }
 
 
