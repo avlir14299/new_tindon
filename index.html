@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>チンドン</title>
     <link rel="stylesheet" href="./css/style.css">
-
     <link rel="icon" type="image/png" href="./images/tindon_logo.png" sizes="96x96">
-    <link rel="stylesheet" href="./font/g_roundbold_kana_004.ttf">
+    <!-- <link rel="stylesheet" href="./font/g_roundbold_kana_004.ttf"> -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 </head>
 
@@ -19,19 +18,39 @@
             <div class="header__contents">
                 <h1 class="header__logo"><a href="index.html"><img src="./images/tindon_logo.png" alt="萩原チンドン祭り"
                             class="header__img"></a></h1>
-                <nav class="header__item">
-                    <ul class="header__nav">
-                        <li class="header__list"><a class="header__link" href="tindon.html">チンドンの歴史</a></li>
-                        <li class="header__list"><a class="header__link" href="hagiwara.html">概要</a></li>
-                        <li class="header__list"><a class="header__link" href="qa.html">5月全国選抜プロチンドン祭り</a></li>
-                        <li class="header__list"><a href="" class="header__link">10月素人チンドン祭り</a></li>
-                        <li class="header__list"><a href="" class="header__link">よくあるご質問</a></li>
-                        <li class="header__list"><a href="" class="header__link">お問い合わせ</a></li>
-                        <li class="header__list"><a href="" class="header__link">アクセス</a></li>
-                        <li class="header__list"><a href="./index.html" class="header__link">トップページ</a></li>
+                <nav class="header__nav">
+
+                    <div class="imageErea">
+                        <img src="./images/tnidonman2.png" alt="" class="imageErea__img">
+                        <img src="./images/tindonman.png" alt="" class="imageErea__img">
+                    </div>
+                    <ul class="header__nav__ul">
+                        <li class="header__nav__list"><a class="header__nav__title" href="history.html">チンドンの歴史</a></li>
+                        <li class="header__nav__list"><a href="event.html">
+                                <dl class="header__nav__title">
+                                    <dt>5月</dt>
+                                    <dd>全国選抜プロ</dd>
+                                    <dd>チンドン祭り</dd>
+                                </dl>
+                            </a></li>
+                        <li class="header__nav__list"><a href="event.html" class="header__link">
+                                <dl class="header__nav__title">
+                                    <dt>10月</dt>
+                                    <dd>素人チンドン祭り</dd>
+
+                                </dl>
+                            </a></li>
+                        <li class="header__nav__list"><a href="q&a.html" class="header__nav__title">よくあるご質問</a></li>
+                        <li class="header__nav__list"><a href="" class="header__nav__title">お問い合わせ</a></li>
+                        <li class="header__nav__list"><a href="" class="header__nav__title">アクセス</a></li>
+                        <li class="header__nav__list"><a href="./index.html" class="header__nav__title">トップページ</a></li>
                     </ul>
-                    <div class="header__hamburger"><span></span></div>
+
                 </nav>
+                <div class="header__hamburger" id="hum">
+                    <span class="header__hamburger__line"></span>
+                    <span class="header__hamburger__line"></span>
+                </div>
             </div>
         </div>
     </header>
@@ -46,58 +65,62 @@
             <div class="tindonman__img"></div>
         </section>
         <section class="history">
-            <div class="history__inner">
-                <div class="history__mode">
-                    <h2 class="history__mode__title">チンドンの歴史</h2>
-                    <p class="history__mode__text">
-                        SDWA にアクセスして更新するには、リカバリー・ルーチンに IHASDWA マッピング・ マクロを DSECT として組み込む必要があります。 SDWA の詳細については、z/OS
-                        Internet ...
+            <div class="history__mode">
+                <h2 class="history__mode__title">チンドンの歴史</h2>
+                <p class="history__mode__text">
+                    長い歴史の中で、飴勝や勇亀の活躍によってちんどん屋の伝統は継承され、広告業界に新たなスタイルをもたらしました。
+                    そして、秋田柳吉の楽隊広告やちんどん太鼓の考案によって、ちんどん屋はますます広まっていきました。
+                    その後ちんどん屋は第二次世界大戦と共に佳境を迎えることになった…
 
-                    </p>
-                    <div id="btn" class="history__btn">
-                        <a href="#" class="history__btn__design">もっと見る</a>
-                        <span class="history__btn__circleLeft1"></span>
-                        <span class="history__btn__circleRight1"></span>
-                    </div>
+                </p>
+                <div id="btn" class="history__btn btn">
+                    <a href="#" class="history__btn__design btn__design">もっと見る</a>
+                    <span class="history__btn__circleLeft1 btn__circle Left1"></span>
+                    <span class="history__btn__circleRight1 btn__circle Right1"></span>
                 </div>
-
             </div>
+            <img src="./images/street.png" alt="" class="history__img">
         </section>
         <secton class="summary">
-            <div class="summary__inner">
-                <h2 class="summary__title">概要</h2>
-                <div class="summary__container">
+            <h2 class="summary__title">概要</h2>
+            <div class="summary__container">
+                <div class="summary__flex">
                     <div class="summary__event">
                         <h2 class="summary__event--title">素人チンドン</h2>
                         <div class="summary__content">
                             <h3 class="summary__content__title">5月</h3>
-                            <p class="summary__content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <p class="summary__content__text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
                                 Optio illo
                                 quibusdam quaerat saepe voluptatum ducimus, possimus porro eligendi rerum laboriosam
                                 nisi, quo tempore. Velit repellendus cupiditate sapiente nisi tempore tempora.</p>
                             <div id="btn" class="summary__btn">
-                                <a href="#" class="summary__btn__design">もっと見る</a>
+                                <a href="event.html" class="summary__btn__design">もっと見る</a>
                             </div>
                         </div>
                     </div>
+                    <img src="./images/street.png" alt="" class="summary__img">
+                </div>
+                <div class="summary__flex">
                     <div class="summary__event">
                         <h2 class="summary__event--title">全国選抜チンドン</h2>
                         <div class="summary__content">
                             <h3 class="summary__content__title">10月</h3>
-                            <p class="summary__content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <p class="summary__content__text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
                                 Explicabo
                                 minima ab recusandae, a vero, ullam mollitia magnam accusantium dolor deserunt, quis
                                 fugit earum cum maxime perferendis at! Autem, praesentium corrupti.</p>
                             <div id="btn" class="summary__btn">
-                                <a href="#" class="summary__btn__design">もっと見る</a>
+                                <a href="event.html" class="summary__btn__design">もっと見る</a>
 
                             </div>
                         </div>
                     </div>
+                    <img src="./images/street.png" alt="" class="summary__img">
                 </div>
-                <div class="summary__img"></div>
             </div>
-            </div>
+            <div class="summary__img"></div>
         </secton>
         <section class="access">
             <div class="access__inner">
@@ -116,13 +139,22 @@
                         名鉄尾西線<span>萩原駅</span>が最寄駅となっております。
                     </p>
                     <ul class="access__map">
-                        <li class="access__list">名鉄名古屋駅</li>
-                        <li class="access__list">5番ホーム<br>東海道本線 各停 岐阜行 16分</li>
-                        <li class="access__list">尾張一宮駅</li>
-                        <li class="access__list">徒歩2分</li>
-                        <li class="access__list">名鉄一宮駅</li>
-                        <li class="access__list">尾西線 各停 森上行 8分</li>
-                        <li class="access__list">萩原駅</li>
+                        <div class="access__item">
+                            <li class="access__list">名鉄名古屋駅</li>
+                            <li class="access__list">5番ホーム<br>東海道本線 各停<br> 岐阜行 16分</li>
+                        </div>
+                        <div class="access__item">
+                            <li class="access__list">尾張一宮駅</li>
+                            <li class="access__list">徒歩2分</li>
+                        </div>
+                        <div class="access__item">
+                            <li class="access__list">名鉄一宮駅</li>
+                            <li class="access__list">尾西線 各停 森上行 8分</li>
+                        </div>
+                        <div class="access__item">
+                            <li class="access__list">萩原駅</li>
+                        </div>
+
                     </ul>
                 </div>
             </div>
@@ -169,52 +201,78 @@
                 <a href="" class="footer__icon-link"><img src="./images/icon/Instagram_Glyph_Black.svg" alt="Instagram"
                         class="footer__icon--sns"></a>
             </div>
-            <div class="footer__hold">
-                <h3 class="footer__hold__title">開催月</h3>
-                <div class="footer__hold__link">
-                    <div id="btn" class="btn">
-                        <a href="#" class="btn__design">もっと見る</a>
-                        <span class="btn__circle Left1"></span>
-                        <span class="btn__circle Right1"></span>
+            <div class="footer__content">
+                <div class="footer__left">
+                    <div class="footer__hold">
+                        <h3 class="footer__hold--title">開催月</h3>
+                        <div class="footer__hold--btn">
+                            <div id="btn" class="btn">
+                                <a href="#" class="btn__design">5月</a>
+                                <span class="btn__circle Left1"></span>
+                                <span class="btn__circle Right1"></span>
+                            </div>
+                            <div id="btn" class="btn">
+                                <a href="#" class="btn__design">10月</a>
+                                <span class="btn__circle Left1"></span>
+                                <span class="btn__circle Right1"></span>
+                            </div>
+                        </div>
                     </div>
-                    <div id="btn" class="btn">
-                        <a href="#" class="btn__design">もっと見る</a>
-                        <span class="btn__circle Left1"></span>
-                        <span class="btn__circle Right1"></span>
+                    <div class="footer__address">
+                        <div class="footer__address--box">
+                            <h3 class="footer__address--title">TEL</h3>
+                            <p class="footer__address--text">0586-28-9131</p>
+                        </div>
+                        <div class="footer__address--box">
+                            <h3 class="footer__address--title">住所</h3>
+                            <p class="footer__address--text">〒491-0353<br>
+                                愛知県一宮市萩原町萩原 下町２２</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer__address">
-                <div class="footer__address__contents">
-                    <h3 class="footer__address__title">TEL</h3>
-                    <p class="footer__address__text">0586-28-9131</p>
+                <div class="footer__right">
+                    <div class="footer__index">
+                        <h3 class="index__title">もくじ</h3>
+                        <ul class="index__contents Invincibles">
+                            <li class="index__list">
+                                <div id="btn" class="btn footerBtn">
+                                    <a href="#" class="btn__design">TOP</a>
+                                    <span class="btn__circle Left1"></span>
+                                    <span class="btn__circle Right1"></span>
+                                </div>
+                            </li>
+                            <li class="index__list">
+                                <div id="btn" class="btn footerBtn">
+                                    <a href="#" class="btn__design">チンドン祭り</a>
+                                    <span class="btn__circle Left1"></span>
+                                    <span class="btn__circle Right1"></span>
+                                </div>
+                            </li>
+                            <li class="index__list">
+                                <div id="btn" class="btn footerBtn">
+                                    <a href="#" class="btn__design">アクセス</a>
+                                    <span class="btn__circle Left1"></span>
+                                    <span class="btn__circle Right1"></span>
+                                </div>
+                            </li>
+                            <li class="index__list">
+                                <div id="btn" class="btn footerBtn">
+                                    <a href="#" class="btn__design">Q＆A</a>
+                                    <span class="btn__circle Left1"></span>
+                                    <span class="btn__circle Right1"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer__address__contents">
-                    <h3 class="footer__address__title">住所</h3>
-                    <p class="footer__address__text">〒491-0353<br>
-                        愛知県一宮市萩原町萩原 下町２２</p>
-                </div>
-            </div>
-            <div class="footer__index">
-                <h3 class="footer__index-title">もくじ ▼</h3>
-                <ul class="footer__index-contents Invincibles">
-                    <a href="./hagiwara.html" class="footer__index-link">
-                        <li class="footer__index-list">概要</li>
-                    </a><a href="./tindon.html" class="footer__index-link">
-                        <li class="footer__index-list">チンドン祭りについて</li>
-                    </a><a href="./" class="footer__index-link">
-                        <li class="footer__index-list">アクセス</li>
-                    </a><a href="./qa.html" class="footer__index-link">
-                        <li class="footer__index-list">Q&A</li>
-                    </a>
-                </ul>
             </div>
             <div class="footer__copy">
                 <small class="footer__copy-text">&copy;</small>
             </div>
         </div>
     </footer>
-    <script src="./tindon.js"></script>
+    <script src="./js/index.js"></script>
 </body>
+
 
 </html>
