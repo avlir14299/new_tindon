@@ -1492,7 +1492,7 @@ a {
 }
 
 .story {
-  height: 650vh;
+  height: 580vh;
   width: 100vw;
 }
 .story__title {
@@ -1524,6 +1524,46 @@ a {
 .story__texterea.on {
   opacity: 1;
   transition: 0.2s;
+}
+.story__imgs {
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  width: 60vw;
+  height: 60vh;
+  opacity: 0;
+  transition: 0.2s;
+}
+@media (max-width: 640px) {
+  .story__imgs {
+    bottom: 0;
+  }
+}
+.story__imgs.on {
+  opacity: 1;
+  transition: 0.2s;
+}
+.story__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40vw;
+  height: auto;
+  display: block;
+  transform: translateX(-30%);
+}
+.story__img:first-child {
+  transform: translateX(40%);
+}
+.story__img.small {
+  width: 25vw;
+  transform: translateX(80%);
+}
+@media (max-width: 640px) {
+  .story__img {
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .instrument__inner {

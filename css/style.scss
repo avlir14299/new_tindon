@@ -1583,7 +1583,7 @@ a {
 
 // HISTORY
 .story {
-    height: 650vh;
+    height: 580vh;
     width: 100vw;
 
     &__title {
@@ -1615,6 +1615,52 @@ a {
             transition: .2s;
         }
 
+    }
+
+    &__imgs {
+        position: fixed;
+        bottom: 10%;
+        right: 10%;
+        width: 60vw;
+        height: 60vh;
+        opacity: 0;
+        transition: .2s;
+
+
+        @media (max-width:640px) {
+            bottom: 0;
+        }
+
+
+
+        &.on {
+            opacity: 1;
+            transition: .2s;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40vw;
+        height: auto;
+        display: block;
+        transform: translateX(-30%);
+
+        &:first-child {
+            transform: translateX(40%);
+        }
+
+        &.small {
+            width: 25vw;
+            transform: translateX(80%);
+        }
+
+        @media (max-width:640px) {
+            bottom: 0;
+            left: 0;
+        }
     }
 }
 
