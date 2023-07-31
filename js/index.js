@@ -99,8 +99,9 @@ fetch("https://tindon.microcms.io/api/v1/event", {
       th.textContent = json.contents[i].teamName;
       tdMiddle.textContent = json.contents[i].middle;
 
-      tbody.append(tr);
       tr.append(tdMiddle);
+      tbody.append(tr);
+
     }
   });
 
@@ -115,6 +116,12 @@ hamburger.addEventListener('click', () => {
   menu.classList.toggle('active');
   nav.classList.toggle('active');
 });
+hamburger.addEventListener('mouseover', () => {
+  header.classList.add('active');
+  hamburger.classList.add('active');
+  menu.classList.add('active');
+  nav.classList.add('active');
+});
 menu.addEventListener('mouseleave', () => {
   header.classList.remove('active');
   hamburger.classList.remove('active');
@@ -127,3 +134,23 @@ window.addEventListener('resize', () => {
   menu.classList.remove('active');
   nav.classList.remove('active');
 });
+
+window.addEventListener('scroll', () => {
+  console.log(scrollY);
+
+  if (scrollY > 400) {
+    header.classList.remove('off');
+  } else {
+    header.classList.add('off');
+  }
+})
+
+window.addEventListener('DOMContentLoaded', () => {
+  const firstView = document.querySelector('.firstview__logo');
+  const chindon = document.querySelector('.firstview__chindon');
+  const chindon2 = document.querySelector('.firstview__chindon2');
+
+  firstView.classList.add('on');
+  chindon.classList.add('on');
+  chindon2.classList.add('on');
+})
