@@ -110,6 +110,7 @@ const header = document.querySelector('.header');
 const hamburger = document.querySelector('#hamburger');
 const menu = document.querySelector('.header__menu');
 const nav = document.querySelector('#nav');
+const link = document.querySelectorAll('.nav__link');
 hamburger.addEventListener('click', () => {
   header.classList.toggle('active');
   hamburger.classList.toggle('active');
@@ -121,12 +122,18 @@ hamburger.addEventListener('mouseover', () => {
   hamburger.classList.add('active');
   menu.classList.add('active');
   nav.classList.add('active');
+  link.forEach(ele => {
+    ele.classList.add('over');
+  })
 });
 menu.addEventListener('mouseleave', () => {
   header.classList.remove('active');
   hamburger.classList.remove('active');
   menu.classList.remove('active');
   nav.classList.remove('active');
+  link.forEach(ele => {
+    ele.classList.remove('over');
+  })
 });
 window.addEventListener('resize', () => {
   header.classList.remove('active');
@@ -153,4 +160,30 @@ window.addEventListener('DOMContentLoaded', () => {
   firstView.classList.add('on');
   chindon.classList.add('on');
   chindon2.classList.add('on');
+})
+
+
+window.addEventListener('scroll', () => {
+  console.log(scrollY);
+  const storyText = document.querySelectorAll('.story__texterea');
+  const storyTitle = document.querySelector('.story__title');
+  let i = 660;
+  let j = 1000;
+
+  if (scrollY > i && scrollY < 5000) {
+    storyTitle.classList.add('on');
+  } else if (scrollY < i || scrollY > 5000) {
+    storyTitle.classList.remove('on');
+  };
+  storyText.forEach(ele => {
+    if (scrollY > i && scrollY < j) {
+      ele.classList.add('on');
+    } else if (scrollY < i || scrollY > j) {
+      ele.classList.remove('on');
+    };
+
+    i += 500;
+    j += 500;
+  })
+
 })

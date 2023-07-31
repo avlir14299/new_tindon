@@ -380,6 +380,8 @@ a {
     display: none;
     justify-content: space-between;
     margin-left: auto;
+    position: relative;
+    z-index: 900;
 
     &__images {
         position: relative;
@@ -418,8 +420,6 @@ a {
 
     &__link {
         color: #592A0C;
-
-
     }
 
     &__hamburger {
@@ -500,6 +500,9 @@ a {
     }
 
     .nav {
+
+        z-index: 900;
+
         &__images {
             &-img:nth-child(1) {
                 display: none;
@@ -521,10 +524,8 @@ a {
             margin-bottom: 24px;
             margin-right: 14px;
 
-            &:hover {
-                .nav__link {
-                    color: $main-color;
-                }
+            &.over {
+                color: $main-color;
             }
 
 
@@ -703,6 +704,8 @@ a {
                 padding: 0;
                 width: 47%;
                 margin-bottom: 20px;
+
+
             }
 
             &__link {
@@ -730,6 +733,12 @@ a {
     width: 100vw;
     overflow: hidden;
     background: url(../images/saturated.png) no-repeat center center/cover;
+
+    &.his {
+        height: 100vh;
+
+
+    }
 
     @media (max-width:640px) {
         height: 100vh;
@@ -913,7 +922,6 @@ a {
 
     &__img {
         width: 100%;
-
     }
 
     &__flex {
@@ -924,6 +932,10 @@ a {
 
         @media (min-width:980px) {
             flex-direction: row;
+
+            .summary__img {
+                width: 50vw;
+            }
         }
 
         &:last-child {
@@ -933,7 +945,6 @@ a {
 
             .summary__event {
                 margin: 0 6.15vw 0 0;
-
                 flex-direction: row;
             }
 
@@ -1571,12 +1582,39 @@ a {
 
 
 // HISTORY
-.main {
+.story {
+    height: 650vh;
+    width: 100vw;
+
     &__title {
         @include title();
         writing-mode: vertical-lr;
-        margin-left: auto;
         margin-right: auto;
+        position: fixed;
+        top: 15%;
+        left: 5%;
+        opacity: 0;
+        transition: .2s;
+
+        &.on {
+            opacity: 1;
+            transition: .2s;
+        }
+    }
+
+    &__texterea {
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: .2s;
+
+        &.on {
+            opacity: 1;
+            transition: .2s;
+        }
+
     }
 }
 
@@ -1591,10 +1629,8 @@ a {
 
     &__image {
         margin: 32px 0;
-        background-color: #ddd;
         width: 100%;
         height: auto;
-        padding: 100px 200px;
         border-radius: 10px;
     }
 }
