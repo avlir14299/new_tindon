@@ -46,3 +46,13 @@ window.addEventListener('DOMContentLoaded', () => {
     observer.observe(target);
   });
 });
+
+const question = document.querySelectorAll('.question');
+const item = document.querySelectorAll('.questions__item');
+
+for (let i = 0; i < item.length; i++) {
+  question[i].addEventListener('click', () => {
+    console.log('aaa');
+    item[i].classList.toggle('off');
+  })
+}
