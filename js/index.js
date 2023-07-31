@@ -1,10 +1,4 @@
-const humburger = document.querySelector("#hum");
-const nav = document.querySelector(".header__nav");
 
-humburger.addEventListener('click', () => {
-  humburger.classList.toggle('on');
-  nav.classList.toggle('on');
-})
 
 const btn = document.querySelectorAll(".btn");
 btn.forEach(element => {
@@ -36,12 +30,17 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   };
   const targets = document.querySelectorAll(".float");
-  const slide = document.querySelectorAll('.slide')
+  const slideR = document.querySelectorAll('.slider');
+  const slideL = document.querySelectorAll('.slidel');
   targets.forEach(target => {
     const observer = new IntersectionObserver(callback, options);
     observer.observe(target);
   });
-  slide.forEach(target => {
+  slideR.forEach(target => {
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(target);
+  });
+  slideL.forEach(target => {
     const observer = new IntersectionObserver(callback, options);
     observer.observe(target);
   });
@@ -55,4 +54,76 @@ for (let i = 0; i < item.length; i++) {
     console.log('aaa');
     item[i].classList.toggle('off');
   })
-}
+};
+const acordion = document.querySelector('.index__title');
+const acordionON = document.querySelector('.index__contents');
+
+acordion.addEventListener('click', () => {
+  console.log('aaa')
+  acordionON.classList.toggle('Invincibles');
+})
+
+console.log(acordion);
+
+
+const tindon = document.querySelector('#tindon');
+let timeoutId;
+window.addEventListener("scroll", function () {
+  tindon.classList.add('on');
+
+  clearTimeout(timeoutId);
+
+
+
+  timeoutId = setTimeout(function () {
+    tindon.classList.remove('on');
+  }, 200);
+});
+
+const tbody = document.querySelector('#tbody');
+const venueEvent = document.querySelector('#event');
+
+fetch("https://tindon.microcms.io/api/v1/event", {
+  headers: {
+    "X-MICROCMS-API-KEY": "IjdEpiSfHh8bBqHW8mvDSSghmo9pFdKIUgAu"
+  }
+
+})
+  .then(res => res.json())
+  .then(json => {
+    for (i = 0; i < json.contents.length; i++) {
+      const tr = document.createElement('tr');
+      const th = document.createElement('th');
+      const tdMiddle = document.createElement('td');
+
+      th.textContent = json.contents[i].teamName;
+      tdMiddle.textContent = json.contents[i].middle;
+
+      tbody.append(tr);
+      tr.append(tdMiddle);
+    }
+  });
+
+
+const header = document.querySelector('.header');
+const hamburger = document.querySelector('#hamburger');
+const menu = document.querySelector('.header__menu');
+const nav = document.querySelector('#nav');
+hamburger.addEventListener('click', () => {
+  header.classList.toggle('active');
+  hamburger.classList.toggle('active');
+  menu.classList.toggle('active');
+  nav.classList.toggle('active');
+});
+menu.addEventListener('mouseleave', () => {
+  header.classList.remove('active');
+  hamburger.classList.remove('active');
+  menu.classList.remove('active');
+  nav.classList.remove('active');
+});
+window.addEventListener('resize', () => {
+  header.classList.remove('active');
+  hamburger.classList.remove('active');
+  menu.classList.remove('active');
+  nav.classList.remove('active');
+});
