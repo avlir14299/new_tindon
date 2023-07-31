@@ -41,39 +41,71 @@
         </div>
     </header>
     <main class="main">
+        <section class="firstview">
+            <div class="firstview__image">
+                <img src="./images/tindon_logo.png" alt="" class="firstview__logo">
+            </div>
+            <img src="./images/tindonman.png" alt="" class="firstview__chindon">
+            <img src="./images/tindonman2.png" alt="" class="firstview__chindon2">
+            <img src="./images/stall.png" class="firstview__stall">
+        </section>
         <section class="venue">
             <div class="venue__inner">
+                <h2 class="venue__title">イベント内容</h2>
+                <div class="venue__btn">
+                    <p id="venueBtn" class="venue__btn-design">10月へ</p>
+                </div>
                 <ul class="venue__tab">
-                    <li class="venue__tab-list show">
-                        <div class="venue__tab-border show">東会場</div>
+                    <li id="east" class="tab show">
+                        <div id="eastBorder" class="tab__border show">東会場</div>
                     </li>
-                    <li class="venue__tab-list">
-                        <div class="venue__tab-border">中央会場</div>
+                    <li id="middle" class="tab">
+                        <div id="middleBorder" class="tab__border">中央会場</div>
                     </li>
-                    <li class="venue__tab-list">
-                        <div class="venue__tab-border">北会場</div>
+                    <li id="north" class="tab">
+                        <div id="northBorder" class="tab__border">北会場</div>
                     </li>
                 </ul>
                 <div class="venue__menu">
                     <div class="venue__wrapper">
-                        <div class="venue__box">
-                            <h3 class="venue__box-title">祭り種類</h3>
-                            <div class="venue__box-middle">
-                                <p class="venue__box-text-sub">全国選抜チンドン祭り</p>
-                                <p class="venue__box-sub">選抜で選ばれたプロのチンドン屋さんが<br>
-                                    お祭りを盛り上げてくれます！</p>
+                        <div class="venue__season-5 showMonth">
+                            <div class="venue__box">
+                                <h3 class="venue__box-title">祭り種類</h3>
+                                <div class="venue__box-middle">
+                                    <p class="venue__box-text-sub">全国選抜チンドン祭り</p>
+                                    <p class="venue__box-sub">選抜で選ばれたプロのチンドン屋さんが<br>
+                                        お祭りを盛り上げてくれます！</p>
+                                </div>
+                            </div>
+                            <div class="venue__box bb">
+                                <h3 class="venue__box-title bb">開催日</h3>
+                                <p class="venue__box-text bb">20XX年 5月 XX日</p>
+                            </div>
+                            <div class="venue__box">
+                                <h3 class="venue__box-title">イメージ写真</h3>
+                                <img class="venue__box-img" src="./images/tindon.png" alt="">
                             </div>
                         </div>
-                        <div class="venue__box">
-                            <h3 class="venue__box-title">開催日</h3>
-                            <p class="venue__box-text">20XX年 5月 XX日</p>
-                        </div>
-                        <div class="venue__box">
-                            <h3 class="venue__box-title">イメージ写真</h3>
-                            <img class="venue__box-img" src="./images/tindon.png" alt="">
+                        <div class="venue__season-10">
+                            <div class="venue__box">
+                                <h3 class="venue__box-title">祭り種類</h3>
+                                <div class="venue__box-middle">
+                                    <p class="venue__box-text-sub">素人チンドン祭り</p>
+                                    <p class="venue__box-sub">
+                                        お祭りを盛り上げてくれます！</p>
+                                </div>
+                            </div>
+                            <div class="venue__box bb">
+                                <h3 class="venue__box-title bb">開催日</h3>
+                                <p class="venue__box-text bb">20XX年 10月 XX日</p>
+                            </div>
+                            <div class="venue__box">
+                                <h3 class="venue__box-title">イメージ写真</h3>
+                                <img class="venue__box-img" src="./images/tindon.png" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div class="venue__unit show">
+                    <div class="venue__unit">
                         <div class="unit-time">
                             <h3 class="unit__title">開催時間</h3>
                             <table class="unit__table">
@@ -84,28 +116,37 @@
                         <div class="unit-event">
                             <h3 class="unit__title">開催イべント</h3>
                             <table class="unit__table">
-                                <tbody id="tbody">
+                                <tbody id="tbody2">
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
+                <div id="btn" class="btn">
+                    <a href="#" class="btn__design">10月</a>
+                    <span class="btn__circle Left1"></span>
+                    <span class="btn__circle Right1"></span>
+                </div>
             </div>
         </section>
         <section class="operation">
-            <div class="operation__inner">
-                <div class="operation__content">
-                    <div class="operation__box">
+            <div class="operation__content">
+                <div class="operation__box">
+                    <div class="operation__inner">
                         <h2 class="operation__title">萩原チンドン祭り誰が<br>運営しているの？</h2>
                     </div>
-                    <div class="operation__box">
-                        <div class="operation__organizer">
+                </div>
+                <div class="operation__box">
+                    <div class="operation__organizer">
+                        <div class="operation__inner">
                             <h3 class="operation__title">主催</h3>
                             <p class="operation__text">萩原チンドンまつり実行委員会</p>
                         </div>
                     </div>
-                    <div class="operation__box">
-                        <div class="operation__patronage">
+                </div>
+                <div class="operation__box">
+                    <div class="operation__patronage">
+                        <div class="operation__inner">
                             <h3 class="operation__title">後援</h3>
                             <p class="operation__text">
                                 一宮市 名古屋鉄道（株）<br>
@@ -117,7 +158,9 @@
                                 中日新聞本社 萩原商店街<br>
                             </p>
                         </div>
-                        <div class="operation__sponsorship">
+                    </div>
+                    <div class="operation__sponsorship">
+                        <div class="operation__inner">
                             <h3 class="operation__title">協賛</h3>
                             <p class="operation__text">
                                 一宮市 / 名古屋鉄道（株） / 一宮市観光協会 /（株）アイ・シー・シー / 一宮商工会議所 / 愛商連一宮支部 / 中日新聞本社
@@ -129,7 +172,6 @@
                             </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -225,6 +267,17 @@
                 </div>
             </div>
         </section>
+        <section class="tindonman" id="tindon">
+            <div class="tindonman__item">
+                <img src="./images/tindonman.png" alt="" class="tindonman__item__img">
+                <img src="./images/tindonman2.png" alt="" class="tindonman__item__img">
+            </div>
+            <div class="tindonman__item">
+                <img src="./images/tindonman.png" alt="" class="tindonman__item__img">
+                <img src="./images/tindonman2.png" alt="" class="tindonman__item__img">
+            </div>
+
+        </section>
     </main>
     <footer class="footer">
         <div class="footer__inner">
@@ -305,6 +358,7 @@
         </div>
     </footer>
     <script src="./js/index.js"></script>
+    <script src="./js/event.js"></script>
 </body>
 
 </html>

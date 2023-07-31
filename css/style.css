@@ -1150,18 +1150,43 @@ a {
   }
 }
 
+.venue {
+  margin: 100px 0;
+}
 .venue__inner {
   width: 87.7%;
   margin-left: auto;
   margin-right: auto;
 }
-.venue__tab {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  list-style: none;
+.venue__btn {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 24px;
+  font-family: RocknRollOne;
 }
-.venue__tab-list {
+.venue__btn-design {
+  display: inline-block;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #F6AD3C;
+  width: 110px;
+  height: 110px;
+  border-radius: 100px;
+  border: #fff 1px solid;
+  outline: #F6AD3C solid 8px;
+}
+.venue__title {
+  font-family: RocknRollOne;
+  font-size: 40px;
+  color: #592A0C;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.venue .tab {
   font-family: RocknRollOne;
   font-size: 16px;
   color: #592A0C;
@@ -1176,22 +1201,22 @@ a {
   color: #fff;
   background-color: #D93245;
 }
-.venue__tab-list.show {
-  padding: 5px;
-  color: #592A0C;
-  font-size: 16px;
-  background-color: #fff;
-}
-.venue__tab-border {
+.venue .tab__border {
   padding: 4px;
   border: 1px solid #fff;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
 }
-.venue__tab-border.show {
+.venue .tab__border.show {
   padding: 4px;
   border: 1px solid #D93245;
   border-radius: 10px;
+}
+.venue__tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  list-style: none;
 }
 .venue__box {
   margin-bottom: 20px;
@@ -1199,6 +1224,12 @@ a {
 }
 .venue__box-title {
   display: none;
+}
+.venue__box-title.bb {
+  display: block;
+  width: 30%;
+  text-align: center;
+  font-weight: normal;
 }
 .venue__box-text {
   margin-bottom: 24px;
@@ -1211,13 +1242,53 @@ a {
   margin: 0;
   margin-bottom: 24px;
 }
+.venue__box-text.bb {
+  width: 65%;
+  margin-bottom: 0;
+}
 .venue__box-img {
   width: 100%;
 }
+.venue__box.bb {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ED7222;
+}
+.venue .tab.show {
+  position: relative;
+  padding: 5px;
+  color: #592A0C;
+  font-size: 16px;
+  background-color: #fff;
+}
+.venue .tab.show::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  border-bottom: 10px solid #fff;
+}
 .venue__menu {
+  margin-bottom: 24px;
   padding: 24px;
   border: 2px solid #222;
   background-color: #fff;
+}
+.venue__season-5 {
+  display: none;
+}
+.venue__season-5.showMonth {
+  display: block;
+}
+.venue__season-10 {
+  display: none;
+}
+.venue__season-10.showMonth {
+  display: block;
 }
 .venue__unit {
   display: flex;
@@ -1238,6 +1309,10 @@ a {
   padding: 8px 0;
   border-bottom: 1px solid #ED7222;
 }
+.venue .unit__table td::after {
+  content: "|";
+  color: #fff;
+}
 .venue .unit-time {
   width: 30%;
   text-align: center;
@@ -1246,25 +1321,47 @@ a {
   width: 65%;
   text-align: center;
 }
+.venue .btn {
+  margin: 0 auto;
+}
+
+.operation {
+  margin: 100px 0;
+  background-color: #fff;
+  border: #FFAB5E 32px double;
+}
+.operation__inner {
+  width: 87.7%;
+  margin-left: auto;
+  margin-right: auto;
+  border: #fff 8px solid;
+}
+.operation__title {
+  font-family: RocknRollOne;
+  font-size: 24px;
+  color: #592A0C;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 32px;
+}
+.operation__box {
+  background-color: #fff;
+  padding: 32px;
+}
+.operation__box:nth-child(n+2) {
+  background-image: linear-gradient(to right, #FFAB5E 10px, transparent 2px);
+  background-size: 21px 20px;
+  background-repeat: repeat-x;
+}
+.operation__text {
+  text-align: center;
+}
+.operation__patronage {
+  margin-bottom: 32px;
+}
 
 /* event css PCサイズ */
 @media (min-width: 980px) {
-  .venue__tab-list {
-    font-family: RocknRollOne;
-    font-size: 32px;
-    color: #592A0C;
-    text-align: center;
-    margin: 0;
-    width: 35%;
-    padding: 13px;
-    padding-bottom: 0;
-    border-radius: 10px 10px 0 0;
-    color: #fff;
-  }
-  .venue__tab-list.show {
-    font-size: 32px;
-    padding: 13px;
-  }
   .venue__tab-border {
     padding: 23px;
     border-width: 2px;
@@ -1273,6 +1370,21 @@ a {
   .venue__tab-border.show {
     padding: 23px;
     border-width: 2px;
+  }
+  .venue .tab {
+    font-family: RocknRollOne;
+    font-size: 32px;
+    color: #592A0C;
+    text-align: center;
+    margin: 0;
+    padding: 13px;
+    padding-bottom: 0;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+  }
+  .venue .tab.show {
+    font-size: 32px;
+    padding: 13px;
   }
   .venue__box {
     display: flex;
@@ -1287,8 +1399,16 @@ a {
     font-size: 24px;
     font-weight: normal;
   }
+  .venue__box-title.bb {
+    width: 25%;
+    margin-bottom: 0;
+  }
   .venue__box-text {
     width: 70%;
+  }
+  .venue__box-text.bb {
+    padding-bottom: 25px;
+    border-bottom: 2px solid #ED7222;
   }
   .venue__box-img {
     width: 70%;
@@ -1299,6 +1419,11 @@ a {
   .venue__box-middle {
     width: 70%;
     text-align: center;
+  }
+  .venue__box.bb {
+    align-items: flex-start;
+    border: 0;
+    padding: 0;
   }
   .venue__menu {
     border-width: 2px;
@@ -1316,41 +1441,6 @@ a {
     width: 70%;
   }
 }
-.operation {
-  margin: 100px 0;
-}
-.operation__inner {
-  width: 87.7%;
-  margin-left: auto;
-  margin-right: auto;
-  border: #fff 8px solid;
-  outline: #FFAB5E 8px solid;
-}
-.operation__content {
-  border: #FFAB5E 8px solid;
-}
-.operation__title {
-  font-family: RocknRollOne;
-  font-size: 24px;
-  color: #592A0C;
-  text-align: center;
-  margin: 0;
-  margin-bottom: 32px;
-}
-.operation__box {
-  background-color: #fff;
-  padding: 32px;
-}
-.operation__box:nth-child(n+2) {
-  border-top: 10px dashed #FFAB5E;
-}
-.operation__text {
-  text-align: center;
-}
-.operation__patronage {
-  margin-bottom: 32px;
-}
-
 .questions {
   margin-bottom: 48px;
 }
@@ -1495,6 +1585,11 @@ a {
   height: 580vh;
   width: 100vw;
 }
+@media (min-width: 980px) {
+  .story {
+    height: 660vh;
+  }
+}
 .story__title {
   font-family: RocknRollOne;
   font-size: 40px;
@@ -1521,9 +1616,22 @@ a {
   opacity: 0;
   transition: 0.2s;
 }
+@media (min-width: 980px) {
+  .story__texterea {
+    top: 10%;
+  }
+}
 .story__texterea.on {
   opacity: 1;
   transition: 0.2s;
+}
+.story__texterea__title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.story__texterea__text {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 .story__imgs {
   position: fixed;

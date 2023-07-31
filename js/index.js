@@ -80,30 +80,31 @@ window.addEventListener("scroll", function () {
   }, 200);
 });
 
-const tbody = document.querySelector('#tbody');
-const venueEvent = document.querySelector('#event');
+// const tbody = document.querySelector('#tbody');
+// const venueEvent = document.querySelector('#event');
 
-fetch("https://tindon.microcms.io/api/v1/event", {
-  headers: {
-    "X-MICROCMS-API-KEY": "IjdEpiSfHh8bBqHW8mvDSSghmo9pFdKIUgAu"
-  }
+// fetch("https://tindon.microcms.io/api/v1/event", {
+//   headers: {
+//     "X-MICROCMS-API-KEY": "IjdEpiSfHh8bBqHW8mvDSSghmo9pFdKIUgAu"
+//   }
 
-})
-  .then(res => res.json())
-  .then(json => {
-    for (i = 0; i < json.contents.length; i++) {
-      const tr = document.createElement('tr');
-      const th = document.createElement('th');
-      const tdMiddle = document.createElement('td');
+// })
+//   .then(res => res.json())
+//   .then(json => {
+//     for (i = 0; i < json.contents.length; i++) {
+//       const tr = document.createElement('tr');
+//       const th = document.createElement('th');
+//       const tdMiddle = document.createElement('td');
 
-      th.textContent = json.contents[i].teamName;
-      tdMiddle.textContent = json.contents[i].middle;
+//       th.textContent = json.contents[i].teamName;
+//       tdMiddle.textContent = json.contents[i].middle;
 
-      tr.append(tdMiddle);
-      tbody.append(tr);
+//       tr.append(tdMiddle);
+//       tbody.append(tr);
 
-    }
-  });
+//     }
+//   });
+
 
 
 const header = document.querySelector('.header');
@@ -160,45 +161,3 @@ window.addEventListener('DOMContentLoaded', () => {
   chindon.classList.add('on');
   chindon2.classList.add('on');
 })
-
-
-window.addEventListener('scroll', () => {
-  const storyText = document.querySelectorAll('.story__texterea');
-  const storyTitle = document.querySelector('.story__title');
-  const storyImg = document.querySelectorAll('.story__imgs');
-  let i = 660;
-  let j = 1000;
-
-  if (scrollY > i && scrollY < 5000) {
-    storyTitle.classList.add('on');
-  } else if (scrollY < i || scrollY > 5000) {
-    storyTitle.classList.remove('on');
-  };
-
-  storyText.forEach(ele => {
-
-    if (scrollY > i && scrollY < j) {
-      ele.classList.add('on');
-    } else if (scrollY < i || scrollY > j) {
-      ele.classList.remove('on');
-    };
-    i += 500;
-    j += 500;
-  });
-
-  i = 660;
-  j = 1000;
-
-  storyImg.forEach(ele => {
-    if (scrollY > i && scrollY < j) {
-      ele.classList.add('on');
-    } else if (scrollY < i || scrollY > j) {
-      ele.classList.remove('on');
-    };
-
-    i += 500;
-    j += 500;
-  });
-
-
-});
